@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 
 namespace Exam.Models
 {
-    internal class Loan
+    internal class Loan: BaseEntity
     {
-        public int Id { get; set; }
+       
         public DateTime LoanDate { get; set; }
         public DateTime DueDate { get; set; }
         public DateTime? ReturnDate { get; set; }
         public StatusLoan Status { get; set; } 
 
         public int MemberId { get; set; }
-        public Member Member { get; set; }
+        public Member? Member { get; set; }
 
         public int BookId { get; set; }
-        public Book Book { get; set; }
+        public Book? Book { get; set; }
 
-        public Fine Fine { get; set; }
+        public Fine? Fine { get; set; }
     }
 }

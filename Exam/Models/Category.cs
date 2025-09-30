@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Exam.Models
 {
-    internal class Category
+    internal class Category: BaseEntity
     {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
+        
+        public string? Title { get; set; }
+        public string? Description { get; set; }
 
-        public ICollection<Book> Books { get; set; }
+        public ICollection<Book> Books { get; set; } = new HashSet<Book>();
     }
 }

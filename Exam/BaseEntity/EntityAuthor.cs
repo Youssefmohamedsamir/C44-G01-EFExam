@@ -23,5 +23,5 @@ namespace Exam.BaseEntity
                    .IsRequired();
         }
     }
-    }
 }
+

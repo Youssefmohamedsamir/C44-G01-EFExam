@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace Exam.Models
 {
-    internal class Fine
+    internal class Fine: BaseEntity
     {
-        public int Id { get; set; }
+        
         public decimal Amount { get; set; }
         public DateTime IssuedDate { get; set; }
         public DateTime? PaidDate { get; set; }
         public StatusFine Status { get; set; } 
 
         public int LoanId { get; set; }
-        public Loan Loan { get; set; }
+        public Loan? Loan { get; set; }
     }
 }

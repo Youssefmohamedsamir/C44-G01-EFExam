@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Exam.Models
 {
-    internal class Author
+    internal class Author: BaseEntity
     {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
         public DateTime DateOfBirth { get; set; }
 
-        public ICollection<Book> Books { get; set; }
+        public ICollection<Book> Books { get; set; }= new HashSet<Book>();
     }
 }
